@@ -7,12 +7,14 @@ int main() // Função main
     char cidadeNome1[50], codigoCarta1[50];
     int populacao1, nPontosTuristicos1;
     float pib1, area1;
+    float densidadePopulacional1, pibPerCapita1;
 
     // Variáveis para armazenamento de dados da carta 2
     char estado2;
     char cidadeNome2[50], codigoCarta2[50];
     int populacao2, nPontosTuristicos2;
     float pib2, area2;
+    float densidadePopulacional2, pibPerCapita2;
     
     // Registro dos dados da carta 1
     printf("Bem-vindo ao Super Trunfo!\n");
@@ -72,6 +74,15 @@ int main() // Função main
 
     printf("\n");
 
+    // Calculo de densidade populacional e PIB per capita
+    // Carta 1
+    densidadePopulacional1 = (float)populacao1 / area1;
+    pibPerCapita1 = (float)pib1 / populacao1;
+
+    // Carta 2
+    densidadePopulacional2 = (float)populacao2 / area2;
+    pibPerCapita2 = (float)pib2 / populacao2;
+
     // Exibição dos dados da carta 1
     printf("Informações da Carta 1:\n");
     printf("Codigo da carta: %s\n", codigoCarta1); 
@@ -81,6 +92,8 @@ int main() // Função main
     printf("Area: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Numero de pontos turisticos: %d\n", nPontosTuristicos1);
+    printf("Densidade populacional: %f\n", densidadePopulacional1);
+    printf("PIB per capita: %f\n", pibPerCapita1);
     printf("\n");
 
     // Exibição dos dados da carta 2
@@ -92,6 +105,8 @@ int main() // Função main
     printf("Area: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Numero de pontos turisticos: %d\n", nPontosTuristicos2);
+    printf("Densidade populacional: %f\n", densidadePopulacional2);
+    printf("PIB per capita: %f\n", pibPerCapita2);
 
     return 0;
     }
